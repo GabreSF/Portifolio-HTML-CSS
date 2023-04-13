@@ -187,7 +187,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(119, 18, 235);
+    background-color: #144d7a;
     background-image: url('../img/css-html.png');
     background-position: center;
     background-size: cover;
@@ -199,7 +199,15 @@ p {
 }
 
 .card a {
-    color: white;
+    color: rgb(235, 130, 60);
+}
+
+.card-1 {
+    background-image: url('../img/django.svg');
+}
+
+.card-2 {
+    background-image: url('../img/django.svg')
 }
 
 .card-text {
@@ -250,4 +258,14 @@ p {
 
 .footer a {
     color: #0c2d48 ;
+}
+
+@media (max-width: 800px) {
+    .intro-content, .card-container, {
+        grid-template-columns: 2fr;
+    }
+
+    .card-text {
+        width: 100%;
+    }
 }
