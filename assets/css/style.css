@@ -260,12 +260,71 @@ p {
     color: #0c2d48 ;
 }
 
-@media (max-width: 800px) {
-    .intro-content, .card-container, {
-        grid-template-columns: 2fr;
+
+
+/* Default styles */
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px; /* Adjust font size for better readability on mobile */
+    }
+
+    .intro-img img {
+        max-width: 100%; /* Make the image responsive within its container */
     }
 
     .card-text {
-        width: 100%;
+        font-size: 14px; /* Adjust font size for card text on mobile */
+    }
+}
+
+/* Tablet-specific styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 16px; /* Adjust font size for tablets */
+    }
+
+    .intro-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-img img {
+        max-width: 80%; /* Reduce image width for tablets */
+    }
+
+    .card-text {
+        font-size: 16px; /* Adjust font size for card text on tablets */
+    }
+
+    .card-container {
+        flex-direction: column; /* Stack cards vertically on tablets */
+    }
+}
+
+/* Desktop-specific styles */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px; /* Adjust font size for desktops */
+    }
+
+    .intro-content {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .intro-img img {
+        max-width: 60%; /* Adjust image width for desktops */
+    }
+
+    .card-text {
+        font-size: 18px; /* Adjust font size for card text on desktops */
+    }
+
+    .card-container {
+        flex-direction: row; /* Arrange cards horizontally on desktops */
     }
 }
