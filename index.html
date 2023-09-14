@@ -1,117 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Portfólio - Gabriel</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 
 <body>
-    <aside class="menu">
-        <div class="main-content 
-        menu-content">
-            <h1>
-                <a href="#"><img src="assets\img\logo.png" alt=""></a>
-            </h1>
+    <header class="header">
+        <a href="#" class="logo">Gabriel.</a>
 
-            <nav>
-                <ul>
-                    <li><a href="#home-intro">Home</a></li>
-                    <li><a href="#projeto">Projetos</a></li>
-                    <li><a rel="nofollow" target="_blank" href="https://beacons.ai/gabrielschifelbein">Contate-me</a>
-                    </li>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
 
-                </ul>
-            </nav>
-        </div>
-    </aside>
+        <nav class="navbar">
+            <a href="#" style="--i:0;">Home</a>
+            <a href="#about" style="--i:1;">Sobre</a>
+            <a href="#portfolio" style="--i:2;">Projetos</a>
+            <a href="#" style="--i:3;">Contato</a>
+        </nav>
+    </header>
 
-    <section id="home-intro" class="main-bg section">
-        <div class="main-content intro-content">
-            <div class="intro-text-content">
-                <h1>Gabriel Schifelbein</h1>
-                <h2>full stack developer</h2>
-            </div>
-            <div class="intro-img">
-                <img src="assets\img\codehome.svg" alt="">
-            </div>
-            <div class="social-media">
-                <a rel="nofollow" target="_blank" href="https://github.com/GabreSF">Github</a>
-                <a rel="nofollow" target="_blank"
-                    href="https://www.linkedin.com/in/gabriel-schifelbein-79711020a/">Linkedin</a>
-            </div>
+    <section class="home">
+        <div class="home-content">
+            <h1>Olá, meu nome é Gabriel Schifelbein</h1>
+            <h3>Desenvolvedor Full stack</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem tenetur iste libero perspiciatis omnis
+                ex asperiores vero praesentium, delectus corrupti consectetur ducimus voluptatum dolorum veritatis
+                mollitia ad, at architecto cumque?</p>
+            <a href="assets\pdfs\CV-GabrielSchifelbein.pdf" class="btn" download>Contrate-me</a>
         </div>
 
+        <div class="home-img">
+            <div class="image">
+                <img src="assets\img\Devhome.png" alt="">
+            </div>
+        </div>
     </section>
 
-    <section id="projeto" class="white-bg section">
-        <div class="main-content projetos-content">
-            <h2>Projetos</h2>
-            <p>Olá, seja bem-vindo ao meu portfolio. Aqui você encontrará alguns dos meus projetos pessoais, nos quais
-                tenho me dedicado a desenvolver e aprimorar meus conhecimentos. Sou apaixonado por explorar novas
-                tecnologias e soluções criativas para desafios do mundo moderno. Tenho uma sólida formação em Django
-                Rest Framework e experiência em Django Rest Framework e conhecimentos em MySQL, Docker, Selenium, HTML e
-                CSS. Ao longo dos anos, venho trabalhando com determinação e empenho, buscando sempre superar minhas
-                próprias expectativas e alcançar resultados expressivos. Convido você a explorar meu portfólio e
-                conhecer um pouco mais sobre meu trabalho e minha trajetória profissional.</p>
-        </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets\img\fto-perfil .jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Sobre mim</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolor tenetur iusto cumque
+                        deserunt non quia facere veritatis ullam numquam quidem, tempore praesentium dolorum sunt maxime
+                        rem expedita, dicta corporis.</p>
 
-        <div class="card-container">
-            <div class="card">
-                <div class="card-wrapper">
-                    <a rel="nofollow" target="_blank" href="https://github.com/GabreSF/Portifolio-HTML-CSS">Clique
-                        Aqui!!</a>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('habilidades')">Habilidades</p>
+                        <p class="tab-links" onclick="opentab('experiência')">Experiência</p>
+                        <p class="tab-links" onclick="opentab('educação')">Educação</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="habilidades">
+                        <ul>
+                            <li><span>UI/UX</span><br>Design Web interfaces</li>
+                            <li><span>Desenvolvedor Web</span><br>Desenvolvimento de aplicativos web</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiência">
+                        <ul>
+                            <li><span>2022 - 2023</span><br>Analista de TI</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="educação">
+                        <ul>
+                            <li><span>2022</span><br>Bacharelado em Ciências da Computação.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card-text">
-                Este é o meu primeiro projeto em HTML e CSS, no qual apliquei meu conhecimento que venho adquirindo
-                para criar um website pessoal. Eu comecei estruturando a página em HTML, usando as melhores práticas
-                para torná-la facilmente navegável. O projeto incluiu uma seção sobre mim, minhas habilidades técnicas,
-                projetos pessoais e formas
-                de contato. Com este projeto, pude não só consolidar meus conhecimentos em HTML e CSS, mas também
-                desenvolver habilidades importantes, como resolução de problemas. Estou empolgado
-                em continuar a aperfeiçoar minhas habilidades em desenvolvimento web e criar projetos ainda mais
-                incríveis no futuro!
-            </div>
         </div>
+    </div>
 
-        <div class="card-container">
-            <div class="card-1 card">
-                <div class="card-wrapper">
-                    <a rel="nofollow" target="_blank" href="https://github.com/GabreSF/e-commerce">Clique Aqui!!</a>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Meus Projetos</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="assets\img\home-pjpok.png">
+                    <div class="layer">
+                        <h3>Pokedex App</h3>
+                        <p>Neste projeto meu objetivo foi trazer dados de uma API, utilizando
+                            Django Rest Framework.</p>
+                        <a href="https://github.com/GabreSF/poke"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets\img\store.png">
+                    <div class="layer">
+                        <h3>Ecommerce</h3>
+                        <p>Neste projeto meu objetivo foi criar uma loja virtual, integrando o Paypal.</p>
+                        <a href="https://github.com/GabreSF/e-commerce"><i class='bx bx-link-external'></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="card-text">
-                Neste projeto construí um ecommerce, onde há integração com Paypal, com função de adicionar ao carrinho,
-                Login, alteração de pedidos de compra entre outras pequenas funções
-            </div>
         </div>
+    </div>
 
-        <div class="card-container">
-            <div class="card-2 card">
-                <div class="card-wrapper">
-                    <a rel="nofollow" target="_blank" href="#">Em breve</a>
-                </div>
-            </div>
-            <div class="card-text">
-                Em fase de desenvolvimento!
-            </div>
-        </div>
 
-    </section>
+    <script>
 
-    <footer id="footer" class="footer white-bg">
-        <p><a rel="nofollow" target="_blank" href="https://beacons.ai/gabrielschifelbein">Feito por Gabriel
-                Schifelbein 💻</a></p>
-    </footer>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
 
 </body>
 
