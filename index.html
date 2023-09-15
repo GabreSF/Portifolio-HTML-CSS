@@ -24,7 +24,7 @@
             <a href="#" style="--i:0;">Home</a>
             <a href="#about" style="--i:1;">Sobre</a>
             <a href="#portfolio" style="--i:2;">Projetos</a>
-            <a href="#" style="--i:3;">Contato</a>
+            <a href="#contact" style="--i:3;">Contato</a>
         </nav>
     </header>
 
@@ -122,12 +122,13 @@
                     </div>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Seu Nome" required>
-                        <input type="email" name="email" placeholder="Seu Email" required>
+                        <input type="email" name="Email" placeholder="Seu Email" required>
                         <textarea name="Message" rows="6" placeholder="Mensagem"></textarea>
                         <button type="submit" class="btn btn2">Enviar</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -138,7 +139,6 @@
 
 
     <script>
-
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -152,7 +152,25 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
 
+    <script>
+        const scriptURL = 'https://api.sheetmonkey.io/form/93Jw6xPt22YSh3RLV8FoRZ'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Mensagem enviada com sucesso!!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 
 </body>
